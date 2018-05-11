@@ -1,0 +1,39 @@
+<div class="container">  
+<input type="text"  id="wtf" placeholder="put something you like">
+<button onclick="myClick()">Submit</button>
+<hr>
+<ul id="output"></il>
+
+<script type="text/javascript">
+	var inut= [];
+	function myClick(){
+	var li = document.createElement("li");
+	var content = document.getElementById("wtf").value;
+	var t = document.createTextNode(content);
+	li.appendChild(t);
+
+		if (content == ""){
+			alert("please put something in inoput field")
+		}
+		else{
+			inut.push(content);
+			console.log(inut)
+			document.getElementById("output").appendChild(li);
+			console.log("numer of value in array " + inut.length)
+				for (var i =0 ; i <inut.length ; i++){		
+							var  newI = i+1;
+							console.log("i am i value : " +  i)
+							console.log("i am newI value : " + newI)
+					if( newI%3 === 0){
+						document.getElementById("output").appendChild(li).style="color :red";
+					}
+					else{
+						document.getElementById("output").appendChild(li).style="";
+					}
+				};
+			}
+			document.getElementById("wtf").value = "";
+		}
+	
+</script>
+</div>
